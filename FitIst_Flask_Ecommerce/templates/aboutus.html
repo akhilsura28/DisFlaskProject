@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block title %}About us{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/static/styles/aboutus.css">
+{% endblock %}
+{% block content %}
+<style>
+  .stat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+</style>
+<section>
+  <div class="wrap">
+
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image" src="../static/images/Sony.jpeg" alt="photo">
+        <div class="title-flex">
+          <h3 class="box-title">Sonicaa Koalure</h3>
+          <!-- <p class="user-follow-info">33 Projects</p> -->
+        </div>
+        <p class="description">Sonicaa kolluri did her bachelor's in Electronics and Communications from Vignan
+          University in India. Prior to pursuing his Master's in Business Analytics and Information Systems in USF,
+          she worked as a BI developer. She is skilled in Java, SQL, Python, R, scripting.power BI. She has
+          contributed in creating home page for this website.</p>
+      </div>
+      <a href="#" class="button">Follow</a>
+    </div>
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image" src="../static/images/Rohith.jpeg" alt="photo">
+        <div class="title-flex">
+          <h3 class="box-title">Rohith Rasamalla</h3>
+          <!-- <p class="user-follow-info">26 Projects</p> -->
+        </div>
+        <p class="description">Rohith did his bachelor's in CVR College of Engineering in India. Prior to pursuing
+          his Master's in Business Analytics and Information Systems in USF, he worked as an SDET. He is skilled in
+          Java, SQL, Typescript, Python, R. He has contributed in creating categories page for this website.</p>
+      </div>
+      <a href="#" class="button">Follow</a>
+    </div>
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image" src="../static/images/Akhil.jpeg" alt="photo">
+        <div class="title-flex">
+          <h3 class="box-title">Akhil Sura</h3>
+          <!-- <p class="user-follow-info">12 Projects</p> -->
+        </div>
+        <p class="description">Akhil did his bachelor's in Electronics and Communications from Osmania University in
+          India. Prior to pursuing his Master's in Business Analytics and Information Systems in USF, he worked in a
+          startup as a backend application developer for 20 months and also as an analyst and in application support
+          role for a MNC for an year. He is skilled in Java, SQL, Spring MVC, Python, R, scripting. He also has
+          basic experience working with the ELK stack. He has contributed in creating About Us page for this
+          website.</p>
+      </div>
+      <a href="#" class="button">Follow</a>
+    </div>
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image" src="../static/images/Manoj.jpg" alt="photo">
+        <div class="title-flex">
+          <h3 class="box-title">Manoj Kumar Goud Sowdari</h3>
+          <!-- <p class="user-follow-info">17 Projects</p> -->
+        </div>
+        <p class="description">Manoj did his bachelor's from Osmania University in India. Prior to pursuing his
+          Master's in Business Analytics and Information Systems in USF, he worked as an RPA developer. He is
+          skilled in Java, SQL, Spring MVC, Python, R, scripting. He has contributed in creating Login and chart
+          page for this website.</p>
+      </div>
+      <a href="#" class="button">Follow</a>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div style="width: 100%;text-align: center;margin-top: 24px;">
+  <h1>Our Sales this quarter</h1>
+</div>
+<div class="stat-container">
+  <canvas id="stats"></canvas>
+</div>
+<script>
+  const labels = ['January', 'February', 'March', 'April', 'May', 'June'];
+  const data1 = [250, 500, 300, 600, 400, 800];
+  const data2 = [300, 600, 400, 800, 500, 1000];
+
+  const lineChart = document.getElementById('stats').getContext('2d');
+  const chart = new Chart(lineChart, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Equipment',
+        data: data1,
+        borderColor: '#00bfa5',
+        fill: false
+      }, {
+        label: 'Supplements',
+        data: data2,
+        borderColor: '#ff4081',
+        fill: false
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      title: {
+        display: false
+      },
+      legend: {
+        position: 'bottom'
+      },
+      tooltips: {
+        mode: 'index',
+        intersect: false
+      },
+      hover: {
+        mode: 'nearest',
+        intersect: true
+      },
+    }
+  });
+
+</script>
+{% endblock %}

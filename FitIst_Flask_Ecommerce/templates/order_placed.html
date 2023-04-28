@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Order Placed Successfully</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 24px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 36px;
+            color: #4CAF50;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #009688;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Your order has been placed successfully!</h1>
+        <p>Thank you for your purchase. Your order will be processed and shipped soon.</p>
+        <a href="/" class="btn">Go to Home Page</a>
+    </div>
+    <script>
+        function clearCart() {
+            localStorage.removeItem("shoppingCart")
+        }
+        clearCart()
+    </script>
+</body>
+
+</html>

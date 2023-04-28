@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/static/styles/home.css">
+{% endblock %}
+{% block content %}
+<section>
+  <div class="container">
+    <div class="img-container-grid">
+      <div class="smallsquare"><img src="../static/images/p7.jpeg" class="img-grid-c"></div>
+      <div class="smallsquare"><img src="../static/images/35.jpeg" class="img-grid-c"></div>
+      <div class="h_rectangle"><img src="../static/images/dis .jpg" class="img-grid-c"></div>
+      <div class="smallsquare"><img src="../static/images/pic 1.jpg" class="img-grid-c"></div>
+      <div class="bigsquare"><img src="../static/images/4.jpg" class="img-grid-c"></div>
+      <div class="bigsquare_blank">
+        <div class="inner_square"><img src="../static/images/14.jpg" class="img-grid-c"></div>
+        <div class="inner_square"><img src="../static/images/13.jpeg" class="img-grid-c"></div>
+        <div class="inner_square"><img src="../static/images/20.jpeg" class="img-grid-c"></div>
+        <div class="inner_square"><img src="../static/images/33.jpeg" class="img-grid-c"></div>
+      </div>
+      <div class="v_rectangle"><img src="../static/images/28.jpeg" class="img-grid-c"></div>
+    </div>
+  </div>
+</section>
+<br><br>
+<p id="proj_desc">Welcome to our fitness e-commerce website, where we provide everything you need to achieve your
+  health and fitness goals. Our website offers a wide range of products, from workout equipment and apparel to
+  supplements and nutrition plans.
+
+  We believe that fitness should be accessible to everyone, and we strive to make our products and services
+  affordable and easy to use. Our team of fitness experts and nutritionists have carefully curated a selection of
+  high-quality products that are designed to help you get the most out of your workouts and reach your fitness
+  goals.
+
+  Whether you're a beginner or a seasoned athlete, our website has everything you need to succeed. We are committed
+  to providing exceptional customer service and support, and we are always here to answer any questions you may
+  have.
+
+  Thank you for choosing our fitness e-commerce website as your go-to resource for all your health and fitness
+  needs. We look forward to helping you achieve your goals and living your best life.</p>
+<br>
+<br>
+<h2 style="margin-left:35%;">Our Products</h2>
+<ul style="margin-left:14%;">
+  <li class="booking-card" style="background-image: url(../static/images/25.jpg)">
+    <div class="book-container">
+      <div class="content">
+        <a class="btn" href="/categories/equipment">Explore</a>
+      </div>
+    </div>
+    <div class="informations-container">
+      <h2 class="title">Equipment</h2>
+      <!-- <p class="sub-title">Et moi un je suis sous-titre</p> -->
+      <p class="price"><svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z" />
+        </svg>Starts at 30$</p>
+    </div>
+  </li>
+  <li class="booking-card" style="background-image: url(../static/images/38.jpeg)">
+    <div class="book-container">
+      <div class="content">
+        <a class="btn" href="/categories/supplements">Explore</a>
+      </div>
+    </div>
+    <div class="informations-container">
+      <h2 class="title">Supplements</h2>
+      <!-- <p class="sub-title">Et moi je suis un 2ème sous-titre</p> -->
+      <p class="price"><svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z" />
+        </svg>Starts of 15$</p>
+    </div>
+  </li>
+  <br>
+  <br>
+  <!-- <h2>Our Story</h2> -->
+  <br>
+  <br>
+  <div style="margin-top:5%">
+    <h2>Our Story</h2>
+    <p id="prod_story">our story begins with a group of fitness enthusiasts who wanted to make it easier for others
+      to live a healthy lifestyle. To address this issue, we created a fitness e-commerce app that provides users
+      with all the tools they need to achieve their fitness goals. The website is designed to be user-friendly, with
+      a simple interface that makes it easy for anyone to use. The goal is to help people live healthier, happier
+      lives by providing them with the resources and support they need.</p>
+  </div>
+</ul>
+
+{% endblock %}

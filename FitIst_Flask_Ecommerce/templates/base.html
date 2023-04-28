@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <link rel="stylesheet" href="/static/styles/nav.css">
+    <link rel="stylesheet" href="/static/styles/footer.css">
+
+    <title>{% block title %}{% endblock %} - FitIST</title>
+
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+        </div>
+
+        <div class="logo">FitIST</div>
+
+        <div class="nav-items">
+            <li><a href="/">Home</a></li>
+            <li><a href="/search">Search</a></li>
+            <li><a href="/categories/all">Categories</a></li>
+            <li><a href="/aboutus">About Us</a></li>
+            <li id="log-status"><a href="/login">Login</a></li>
+        </div>
+
+        <button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#staticBackdrop">
+            <i class="fas fa-shopping-cart total-count"></i>
+        </button>
+
+    </nav>
+    <div style="margin-top: 24px;margin-bottom: 24px;">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Your Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+
+                    </table>
+                    <div class="grand-total">Total price: $<span class="total-cart">0</span></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a href="/checkout"><button type="button" class="btn btn-danger clear-all">Checkout</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>8366 New Jamaica Avenue, NewYork US</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>8184306998</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>mailfitist@info.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area">
+                <div class="footer-container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                            <div class="copyright-text">
+                                <p>Copyright &copy; 2023, All Right Reserved <a href="/">FitIST</a></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="/">Home</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+        }
+    </script>
+
+    <script>
+        var shoppingCart = (function () {
+
+            cart = [];
+
+            function Item(name, price, count) {
+                this.name = name;
+                this.price = price;
+                this.count = count;
+            }
+
+            // Save cart
+            function saveCart() {
+                localStorage.setItem('shoppingCart', JSON.stringify(cart));
+            }
+
+            // Load cart
+            function loadCart() {
+                cart = JSON.parse(localStorage.getItem('shoppingCart'));
+            }
+            if (localStorage.getItem("shoppingCart") != null) {
+                loadCart();
+            }
+
+
+            var obj = {};
+
+            // Add to cart
+            obj.addItemToCart = function (name, price, count) {
+                for (var item in cart) {
+                    if (cart[item].name === name) {
+                        cart[item].count++;
+                        saveCart();
+                        return;
+                    }
+                }
+                var item = new Item(name, price, count);
+                cart.push(item);
+                saveCart();
+            }
+            // Set count from item
+            obj.setCountForItem = function (name, count) {
+                for (var i in cart) {
+                    if (cart[i].name === name) {
+                        cart[i].count = count;
+                        break;
+                    }
+                }
+            };
+            // Remove item from cart
+            obj.removeItemFromCart = function (name) {
+                console.log("removing ", name, " from cart");
+                for (var item in cart) {
+                    if (cart[item].name === name) {
+                        cart[item].count--;
+                        if (cart[item].count === 0) {
+                            cart.splice(item, 1);
+                        }
+                        break;
+                    }
+                }
+                saveCart();
+            }
+
+            // Remove all items from cart
+            obj.removeItemFromCartAll = function (name) {
+                for (var item in cart) {
+                    if (cart[item].name === name) {
+                        cart.splice(item, 1);
+                        break;
+                    }
+                }
+                saveCart();
+            }
+
+            // Clear cart
+            obj.clearCart = function () {
+                cart = [];
+                saveCart();
+            }
+
+            // Count cart 
+            obj.totalCount = function () {
+                var totalCount = 0;
+                for (var item in cart) {
+                    totalCount += cart[item].count;
+                }
+                return totalCount;
+            }
+
+            // Total cart
+            obj.totalCart = function () {
+                var totalCart = 0;
+                for (var item in cart) {
+                    totalCart += cart[item].price * cart[item].count;
+                }
+                return Number(totalCart.toFixed(2));
+            }
+
+            // List cart
+            obj.listCart = function () {
+                var cartCopy = [];
+                for (i in cart) {
+                    item = cart[i];
+                    itemCopy = {};
+                    for (p in item) {
+                        itemCopy[p] = item[p];
+                    }
+                    itemCopy.total = Number(item.price * item.count).toFixed(2);
+                    cartCopy.push(itemCopy)
+                }
+                return cartCopy;
+            }
+            return obj;
+        })();
+
+
+        // Add item
+        $('.default-btn').click(function (event) {
+            // alert('working');
+            event.preventDefault();
+            var name = $(this).data('name');
+            var price = Number($(this).data('price'));
+            shoppingCart.addItemToCart(name, price, 1);
+            displayCart();
+        });
+
+        // Clear items
+        $('.clear-cart').click(function () {
+            shoppingCart.clearCart();
+            displayCart();
+        });
+
+        function displayCart() {
+            var cartArray = shoppingCart.listCart();
+            var output = "";
+            for (var i in cartArray) {
+                output += "<tr>"
+                    + "<td>" + cartArray[i].name + "</td>"
+                    + "<td>(" + cartArray[i].price + ")</td>"
+                    + "<td><div class='input-group'>"
+                    + "<input type='number' min='0' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+                    + "</div></td>"
+                    + "<td><button class='delete-item btn btn-danger' data-name='" + cartArray[i].name + "'>X</button></td>"
+                    + " = "
+                    + "<td>" + cartArray[i].total + "</td>"
+                    + "</tr>";
+            }
+            $('.show-cart').html(output);
+            $('.total-cart').html(shoppingCart.totalCart());
+            $('.total-count').html(shoppingCart.totalCount());
+        }
+
+        // Delete item button
+
+        $('.show-cart').on("click", ".delete-item", function (event) {
+            var name = $(this).data('name')
+            shoppingCart.removeItemFromCartAll(name);
+            displayCart();
+        })
+
+        // Item count input
+        $('.show-cart').on("change", ".item-count", function (event) {
+            var name = $(this).data('name');
+            var count = Number($(this).val());
+            shoppingCart.setCountForItem(name, count);
+            displayCart();
+        });
+        displayCart();
+    </script>
+
+    <script>
+        const loginLink = document.querySelector("#log-status");
+        if (localStorage.getItem("email")) {
+            // Replace the "Login" link with a logout button
+            const logoutButton = document.createElement("button");
+            logoutButton.classList.add("logout-btn");
+            logoutButton.innerHTML = "Logout";
+            logoutButton.addEventListener("click", function () {
+                // Clear the user key from local storage
+                localStorage.removeItem("email");
+                localStorage.removeItem("shoppingCart");
+                // Redirect to the login page
+                window.location.href = "/login";
+            });
+            loginLink.parentNode.replaceChild(logoutButton, loginLink);
+        }
+    </script>
+    {% block scripts %}
+    {% endblock %}
+</body>
+
+</html>
